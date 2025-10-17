@@ -10,11 +10,21 @@
     "type": "git",
     "url": "git+https://github.com/michaelprocha/petpark.git"
   },
-  "keywords": ["tailwind", "HTML", "JavaScript", "website", "frontend"],
+  "keywords": [
+    "tailwind",
+    "HTML",
+    "JavaScript",
+    "website",
+    "frontend"
+  ],
   "author": "Michael Rocha",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/michaelprocha/petpark/issues"
   },
-  "homepage": "https://github.com/michaelprocha/petpark#readme"
+  "homepage": "https://github.com/michaelprocha/petpark#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.14",
+    "tailwindcss": "^4.1.14"
+  }
 }
