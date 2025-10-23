@@ -15,19 +15,19 @@
 	<body>
 		<header>
 			<div class="max-w-300">
-				<div class="flex flex-col items-center py-8 px-6 gap-6 w-full">
+				<div class="flex flex-col items-center py-8 px-6 gap-6 w-full md:grid md:grid-cols-2 md:grid-rows-2 md:px-15 md:pt-8 md:pb-0">
 					<img class="w-48" src="./images/logo.svg" alt="Logo" />
-					<input placeholder="O que você procura?" class="order-3 max-w-150 w-full input bg-[url(../images/search.svg)] bg-no-repeat bg-position-[95%_center]" type="search" />
-					<div class="w-full flex justify-between">
-						<img src="./images/menu.svg" alt="Abrir menu" />
+					<input placeholder="O que você procura?" class="order-3 max-w-150 w-full input bg-[url(../images/search.svg)] bg-no-repeat bg-position-[95%_center] md:col-span-2 md:justify-self-center" type="search" />
+					<div class="w-full flex justify-between md:w-auto md:justify-self-end">
+						<img class="md:hidden" src="./images/menu.svg" alt="Abrir menu" />
 						<div class="hidden">
 							<img src="./images/close.svg" alt="Fechar menu" />
 							<ul>
-								<li><a href="#">Raças</a></li>
-								<li><a href="#">Planos Pet</a></li>
-								<li><a href="#">Serviços</a></li>
-								<li><a href="#">Sobre nós</a></li>
-								<li><a href="#">Clube de descontos</a></li>
+								<li><a class="" href="#">Raças</a></li>
+								<li><a class="" href="#">Planos Pet</a></li>
+								<li><a class="" href="#">Serviços</a></li>
+								<li><a class="" href="#">Sobre nós</a></li>
+								<li><a class="" href="#">Clube de descontos</a></li>
 							</ul>
 						</div>
 						<div class="flex gap-2">
@@ -36,13 +36,13 @@
 						</div>
 					</div>
 				</div>
-				<nav class="hidden">
-					<ul>
-						<li><a href="#">Raças</a></li>
-						<li><a href="#">Planos Pet</a></li>
-						<li><a href="#">Serviços</a></li>
-						<li><a href="#">Sobre nós</a></li>
-						<li><a href="#">Clube de descontos</a></li>
+				<nav class="hidden md:flex md:items-center md:justify-center pt-6 pb-8">
+					<ul class="flex gap-6">
+						<li><a class="text-neutral-black text-xl font-normal" href="#">Raças</a></li>
+						<li><a class="text-neutral-black text-xl font-normal" href="#">Planos Pet</a></li>
+						<li><a class="text-neutral-black text-xl font-normal" href="#">Serviços</a></li>
+						<li><a class="text-neutral-black text-xl font-normal" href="#">Sobre nós</a></li>
+						<li><a class="text-neutral-black text-xl font-normal" href="#">Clube de descontos</a></li>
 					</ul>
 				</nav>
 			</div>

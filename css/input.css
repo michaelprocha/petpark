@@ -48,7 +48,8 @@
 		@apply text-title-h5;
 	}
 
-	p {
+	p,
+	a {
 		@apply font-poppins;
 	}
 }
