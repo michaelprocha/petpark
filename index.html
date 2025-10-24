@@ -13,12 +13,12 @@
 		<title>Petpark</title>
 	</head>
 	<body>
-		<header>
-			<div class="max-w-300">
-				<div class="flex flex-col items-center py-8 px-6 gap-6 w-full md:grid md:grid-cols-2 md:grid-rows-2 md:px-15 md:pt-8 md:pb-0">
-					<img class="w-48" src="./images/logo.svg" alt="Logo" />
+		<header class="xl:w-full xl:flex xl:justify-center">
+			<div class="max-w-300 xl:flex xl:flex-col xl:items-center xl:w-full">
+				<div class="flex flex-col items-center py-8 px-6 gap-6 w-full md:grid md:grid-cols-[repeat(2,1fr)] md:grid-rows-[repeat(2,auto)] md:px-15 md:pt-8 md:pb-0 md:gap-x-65 xl:flex xl:flex-row xl:justify-between xl:gap-6 xl:pb-4">
+					<img class="w-48 md:justify-self-end" src="./images/logo.svg" alt="Logo" />
 					<input placeholder="O que você procura?" class="order-3 max-w-150 w-full input bg-[url(../images/search.svg)] bg-no-repeat bg-position-[95%_center] md:col-span-2 md:justify-self-center" type="search" />
-					<div class="w-full flex justify-between md:w-auto md:justify-self-end">
+					<div class="max-w-150 w-full flex justify-between md:w-auto md:justify-self-start xl:order-3">
 						<img class="md:hidden" src="./images/menu.svg" alt="Abrir menu" />
 						<div class="hidden">
 							<img src="./images/close.svg" alt="Fechar menu" />
@@ -36,8 +36,8 @@
 						</div>
 					</div>
 				</div>
-				<nav class="hidden md:flex md:items-center md:justify-center pt-6 pb-8">
-					<ul class="flex gap-6">
+				<nav class="hidden md:flex md:items-center md:justify-center pt-6 pb-8 xl:w-full xl:px-15 xl:pb-8">
+					<ul class="flex gap-6 xl:justify-between xl:w-full">
 						<li><a class="text-neutral-black text-xl font-normal" href="#">Raças</a></li>
 						<li><a class="text-neutral-black text-xl font-normal" href="#">Planos Pet</a></li>
 						<li><a class="text-neutral-black text-xl font-normal" href="#">Serviços</a></li>

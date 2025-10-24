@@ -17,6 +17,7 @@
 	--text-title-h4: 1.938rem;
 	--text-title-h5: 1.563rem;
 	--text-text-small: 0.813rem;
+	--breakpoint-xl: 75rem;
 }
 
 @layer base {
