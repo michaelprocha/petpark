@@ -17,6 +17,7 @@
 	--text-title-h4: 1.938rem;
 	--text-title-h5: 1.563rem;
 	--text-text-small: 0.813rem;
+	--text-title-mobile: 2.4rem;
 	--breakpoint-xl: 75rem;
 }
 
@@ -30,23 +31,23 @@
 	}
 
 	h1 {
-		@apply text-7xl;
+		@apply xl:text-7xl;
 	}
 
 	h2 {
-		@apply text-title-h2;
+		@apply xl:text-title-h2;
 	}
 
 	h3 {
-		@apply text-title-h3;
+		@apply xl:text-title-h3;
 	}
 
 	h4 {
-		@apply text-title-h4;
+		@apply xl:text-title-h4;
 	}
 
 	h5 {
-		@apply text-title-h5;
+		@apply xl:text-title-h5;
 	}
 
 	p,
