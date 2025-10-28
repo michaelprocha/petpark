@@ -64,4 +64,8 @@
     .input::placeholder{
         @apply text-neutral-gray font-poppins text-base;
     }
+
+	.servico{
+		@apply p-7 bg-clear-secondary text-clear-primary text-2xl rounded-2xl text-center;
+	}
 }
