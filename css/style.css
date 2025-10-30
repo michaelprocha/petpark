@@ -16,6 +16,8 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --font-weight-normal: 400;
@@ -231,9 +233,6 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
-  }
   .bg-clear-secondary {
     background-color: var(--color-clear-secondary);
   }
@@ -245,9 +244,6 @@
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
-  }
-  .p-7 {
-    padding: calc(var(--spacing) * 7);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
@@ -324,6 +320,11 @@
       display: none;
     }
   }
+  .md\:w-16 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 16);
+    }
+  }
   .md\:w-151 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 151);
@@ -344,6 +345,16 @@
       grid-template-rows: repeat(2,auto);
     }
   }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:flex-wrap {
+    @media (width >= 48rem) {
+      flex-wrap: wrap;
+    }
+  }
   .md\:items-center {
     @media (width >= 48rem) {
       align-items: center;
@@ -352,6 +363,11 @@
   .md\:justify-center {
     @media (width >= 48rem) {
       justify-content: center;
+    }
+  }
+  .md\:gap-4 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 4);
     }
   }
   .md\:gap-x-65 {
@@ -387,6 +403,20 @@
   .md\:pb-0 {
     @media (width >= 48rem) {
       padding-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:text-title-h2 {
+    @media (width >= 48rem) {
+      font-size: var(--text-title-h2);
+    }
+  }
+  .md\:group-hover\:flex {
+    @media (width >= 48rem) {
+      &:is(:where(.group):hover *) {
+        @media (hover: hover) {
+          display: flex;
+        }
+      }
     }
   }
   .xl\:order-3 {
@@ -459,10 +489,32 @@
       padding-bottom: calc(var(--spacing) * 8);
     }
   }
+  .xl\:pb-20 {
+    @media (width >= 75rem) {
+      padding-bottom: calc(var(--spacing) * 20);
+    }
+  }
+  .xl\:text-3xl {
+    @media (width >= 75rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+  }
+  .xl\:text-4xl {
+    @media (width >= 75rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
   .xl\:text-7xl {
     @media (width >= 75rem) {
       font-size: var(--text-7xl);
       line-height: var(--tw-leading, var(--text-7xl--line-height));
+    }
+  }
+  .xl\:text-title-h2 {
+    @media (width >= 75rem) {
+      font-size: var(--text-title-h2);
     }
   }
 }
@@ -520,13 +572,27 @@
     color: var(--color-neutral-gray);
   }
   .servico {
+    display: flex;
+    height: calc(var(--spacing) * 15.5);
+    width: calc(var(--spacing) * 59.5);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
     border-radius: var(--radius-2xl);
     background-color: var(--color-clear-secondary);
-    padding: calc(var(--spacing) * 7);
     text-align: center;
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
     color: var(--color-clear-primary);
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 22);
+    }
+    @media (width >= 48rem) {
+      min-width: calc(var(--spacing) * 74);
+    }
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 2);
+    }
   }
 }
 @property --tw-font-weight {
