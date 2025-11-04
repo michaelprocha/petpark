@@ -492,6 +492,20 @@
     --tw-shadow: 4px 4px 8px var(--tw-shadow-color, rgba(238, 100, 81, 0.08));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .group-hover\:bg-primary {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-primary);
+      }
+    }
+  }
+  .group-hover\:text-primary {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-primary);
+      }
+    }
+  }
   .group-has-\[input\:checked\]\:bg-clear-primary {
     &:is(:where(.group):has(*:is(input:checked)) *) {
       background-color: var(--color-clear-primary);
@@ -511,6 +525,22 @@
   .placeholder\:text-neutral-black {
     &::placeholder {
       color: var(--color-neutral-black);
+    }
+  }
+  .focus\:border-primary {
+    &:focus {
+      border-color: var(--color-primary);
+    }
+  }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+  }
+  .active\:border-primary {
+    &:active {
+      border-color: var(--color-primary);
     }
   }
   .active\:text-primary {
