@@ -19,6 +19,7 @@
 	--text-text-small: 0.813rem;
 	--text-title-mobile: 2.4rem;
 	--breakpoint-xl: 75rem;
+	--shadow-menu: 4px 4px 8px rgba(238, 100, 81, 0.08);
 }
 
 @layer base {

@@ -24,16 +24,16 @@
 						class="order-3 max-w-150 w-full input bg-[url(../images/search.svg)] bg-no-repeat bg-position-[95%_center] md:col-span-2 md:justify-self-center"
 						type="search"
 					/>
-					<div class="max-w-150 w-full flex justify-between md:w-auto md:justify-self-start xl:order-3">
-						<img class="md:hidden" src="./images/menu.svg" alt="Abrir menu" />
-						<div class="hidden">
-							<img src="./images/close.svg" alt="Fechar menu" />
-							<ul>
-								<li><a class="" href="#">Raças</a></li>
-								<li><a class="" href="#">Planos Pet</a></li>
-								<li><a class="" href="#">Serviços</a></li>
-								<li><a class="" href="#">Sobre nós</a></li>
-								<li><a class="" href="#">Clube de descontos</a></li>
+					<div class="relative max-w-150 w-full flex justify-between md:w-auto md:justify-self-start xl:order-3">
+						<img id="menu" class="cursor-pointer md:hidden" src="./images/menu.svg" alt="Abrir menu" />
+						<div id="menu-mobile" class="hidden absolute flex-col gap-2 cursor-pointer top-0 bg-white p-4 rounded-br-2xl shadow-menu">
+							<img id="menu-close" class="w-4 self-end" src="./images/close.svg" alt="Fechar menu" />
+							<ul class="flex flex-col gap-2">
+								<li><a class="text-neutral-black text-xl font-normal active:text-primary" class="" href="#">Raças</a></li>
+								<li><a class="text-neutral-black text-xl font-normal active:text-primary" class="" href="#">Planos Pet</a></li>
+								<li><a class="text-neutral-black text-xl font-normal active:text-primary" class="" href="#">Serviços</a></li>
+								<li><a class="text-neutral-black text-xl font-normal active:text-primary" class="" href="#">Sobre nós</a></li>
+								<li><a class="text-neutral-black text-xl font-normal active:text-primary" class="" href="#">Clube de descontos</a></li>
 							</ul>
 						</div>
 						<div class="flex gap-2">
@@ -328,5 +328,6 @@
 				<p class="text-center text-base text-neutral-black">Desenvolvido por Alura. Projeto fictício sem fins comerciais.</p>
 			</div>
 		</footer>
+		<script src="./javascript/app.js"></script>
 	</body>
 </html>

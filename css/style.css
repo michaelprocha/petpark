@@ -200,6 +200,9 @@
   .relative {
     position: relative;
   }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
   .top-52 {
     top: calc(var(--spacing) * 52);
   }
@@ -247,6 +250,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
@@ -320,6 +326,9 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .self-end {
+    align-self: flex-end;
+  }
   .justify-self-end {
     justify-self: flex-end;
   }
@@ -334,6 +343,9 @@
   }
   .rounded-xs {
     border-radius: var(--radius-xs);
+  }
+  .rounded-br-2xl {
+    border-bottom-right-radius: var(--radius-2xl);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -365,6 +377,9 @@
   }
   .p-0\.5 {
     padding: calc(var(--spacing) * 0.5);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
@@ -473,6 +488,10 @@
   .opacity-0 {
     opacity: 0%;
   }
+  .shadow-menu {
+    --tw-shadow: 4px 4px 8px var(--tw-shadow-color, rgba(238, 100, 81, 0.08));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .group-has-\[input\:checked\]\:bg-clear-primary {
     &:is(:where(.group):has(*:is(input:checked)) *) {
       background-color: var(--color-clear-primary);
@@ -492,6 +511,11 @@
   .placeholder\:text-neutral-black {
     &::placeholder {
       color: var(--color-neutral-black);
+    }
+  }
+  .active\:text-primary {
+    &:active {
+      color: var(--color-primary);
     }
   }
   .md\:col-span-2 {
@@ -703,11 +727,6 @@
       align-items: center;
     }
   }
-  .xl\:justify-baseline {
-    @media (width >= 75rem) {
-      justify-content: baseline;
-    }
-  }
   .xl\:justify-between {
     @media (width >= 75rem) {
       justify-content: space-between;
@@ -736,11 +755,6 @@
   .xl\:px-15 {
     @media (width >= 75rem) {
       padding-inline: calc(var(--spacing) * 15);
-    }
-  }
-  .xl\:py-10 {
-    @media (width >= 75rem) {
-      padding-block: calc(var(--spacing) * 10);
     }
   }
   .xl\:py-20 {
@@ -867,11 +881,90 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
     }
   }
 }
