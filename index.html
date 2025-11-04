@@ -3,227 +3,317 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sigmar&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
 		<title>Petpark</title>
 	</head>
 	<body>
-		<header>
-			<div>
-				<div>
-					<img src="./images/logo.svg" alt="Logo" />
-					<input type="search" />
-					<div>
-						<img src="./images/menu.svg" alt="Abrir menu" />
-						<div>
+		<header class="xl:w-full xl:flex xl:justify-center">
+			<div class="max-w-300 xl:flex xl:flex-col xl:items-center xl:w-full">
+				<div
+					class="flex flex-col items-center py-8 px-6 gap-6 w-full md:grid md:grid-cols-[repeat(2,1fr)] md:grid-rows-[repeat(2,auto)] md:px-15 md:pt-8 md:pb-0 md:gap-x-65 xl:flex xl:flex-row xl:justify-between xl:gap-6 xl:pb-4"
+				>
+					<img class="w-48 md:justify-self-end" src="./images/logo.svg" alt="Logo" />
+					<input
+						placeholder="O que você procura?"
+						class="order-3 max-w-150 w-full input bg-[url(../images/search.svg)] bg-no-repeat bg-position-[95%_center] md:col-span-2 md:justify-self-center"
+						type="search"
+					/>
+					<div class="max-w-150 w-full flex justify-between md:w-auto md:justify-self-start xl:order-3">
+						<img class="md:hidden" src="./images/menu.svg" alt="Abrir menu" />
+						<div class="hidden">
 							<img src="./images/close.svg" alt="Fechar menu" />
 							<ul>
-								<li><a href="#">Raças</a></li>
-								<li><a href="#">Planos Pet</a></li>
-								<li><a href="#">Serviços</a></li>
-								<li><a href="#">Sobre nós</a></li>
-								<li><a href="#">Clube de descontos</a></li>
+								<li><a class="" href="#">Raças</a></li>
+								<li><a class="" href="#">Planos Pet</a></li>
+								<li><a class="" href="#">Serviços</a></li>
+								<li><a class="" href="#">Sobre nós</a></li>
+								<li><a class="" href="#">Clube de descontos</a></li>
 							</ul>
 						</div>
-						<div>
+						<div class="flex gap-2">
 							<img src="./images/login.svg" aria-hidden="true" />
-							<a href="#">Login/Cadastro</a>
+							<a class="font-poppins text-xl text-neutral-black" href="#">Login/Cadastro</a>
 						</div>
 					</div>
 				</div>
-				<nav>
-					<ul>
-						<li><a href="#">Raças</a></li>
-						<li><a href="#">Planos Pet</a></li>
-						<li><a href="#">Serviços</a></li>
-						<li><a href="#">Sobre nós</a></li>
-						<li><a href="#">Clube de descontos</a></li>
+				<nav class="hidden md:flex md:items-center md:justify-center pt-6 pb-8 xl:w-full xl:px-15 xl:pb-8">
+					<ul class="flex gap-6 xl:justify-between xl:w-full">
+						<li><a class="text-neutral-black text-xl font-normal" href="#">Raças</a></li>
+						<li><a class="text-neutral-black text-xl font-normal" href="#">Planos Pet</a></li>
+						<li><a class="text-neutral-black text-xl font-normal" href="#">Serviços</a></li>
+						<li><a class="text-neutral-black text-xl font-normal" href="#">Sobre nós</a></li>
+						<li><a class="text-neutral-black text-xl font-normal" href="#">Clube de descontos</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<main>
-			<section>
-				<div>
-					<h1>Seu melhor amigo, <span>nosso maior cuidado!</span></h1>
-					<img src="./images/image-hero.png" aria-hidden="true" />
+			<section class="bg-clear-secondary flex items-center justify-center xl:py-20 py-10">
+				<div class="px-5 flex xl:flex-row flex-col justify-center items-center">
+					<h1 class="xl:text-7xl text-center text-title-mobile xl:max-w-148 max-w-148.5 font-normal text-clear-primary">
+						Seu melhor amigo, <span class="text-tertiary">nosso maior cuidado!</span>
+					</h1>
+					<img class="max-w-150 w-79.5 md:w-151" src="./images/image-hero.png" aria-hidden="true" />
 				</div>
 			</section>
-			<section>
-				<div>
-					<h2>Nossos serviços</h2>
-					<ul>
-						<li><img src="./images/icon-banho.svg" aria-hidden="true" /><a href="#">Banho e Tosa</a></li>
-						<li><img src="./images/icon-hospedagem.svg" aria-hidden="true" /><a href="#">Hospedagem</a></li>
-						<li><img src="./images/icon-vet.svg" aria-hidden="true" /><a href="#">Veterinário</a></li>
-						<li><img src="./images/icon-adestramento.svg" aria-hidden="true" /><a href="#">Adestramento</a></li>
-						<li><img src="./images/icon-petsitter.svg" aria-hidden="true" /><a href="#">Petsitter</a></li>
-					</ul>
-					<div>
-						<h3>Planos mensais para seu pet</h3>
-						<div>
-							<div>
-								<img src="./images/cheirosinho.png" aria-hidden="true" />
-								<h4>Cheirosinho</h4>
-								<p>
-									Banho, tosa e corte de unhas 2x ao mês! O pacote econômico essencial para o bem-estar do seu pet! Não inclui
-									coleta.
-								</p>
-								<p>R$ 80</p>
-								<a href="">Assinar plano</a>
+			<section class="pb-10">
+				<div class="flex flex-col items-center mp-4 md:px-15">
+					<div class="py-10 flex flex-col items-center xl:py-20">
+						<h2 class="text-clear-primary text-3xl pb-8 xl:pb-20 md:text-title-h2">Nossos serviços</h2>
+						<ul class="flex flex-col gap-2 md:flex-row md:flex-wrap md:justify-center md:gap-4">
+							<li class="servico group">
+								<img class="hidden md:group-hover:flex md:w-16" src="./images/icon-banho.svg" aria-hidden="true" /><a
+									class="font-sigmar xl:text-3xl"
+									href="#"
+									>Banho e Tosa</a
+								>
+							</li>
+							<li class="servico group">
+								<img class="hidden md:group-hover:flex md:w-16" src="./images/icon-hospedagem.svg" aria-hidden="true" /><a
+									class="font-sigmar xl:text-3xl"
+									href="#"
+									>Hospedagem</a
+								>
+							</li>
+							<li class="servico group">
+								<img class="hidden md:group-hover:flex md:w-16" src="./images/icon-vet.svg" aria-hidden="true" /><a
+									class="font-sigmar xl:text-3xl"
+									href="#"
+									>Veterinário</a
+								>
+							</li>
+							<li class="servico group">
+								<img class="hidden md:group-hover:flex md:w-16" src="./images/icon-adestramento.svg" aria-hidden="true" /><a
+									class="font-sigmar xl:text-3xl"
+									href="#"
+									>Adestramento</a
+								>
+							</li>
+							<li class="servico group">
+								<img class="hidden md:group-hover:flex md:w-16" src="./images/icon-petsitter.svg" aria-hidden="true" /><a
+									class="font-sigmar xl:text-3xl"
+									href="#"
+									>Petsitter</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="bg-primary rounded-4xl w-full xl:max-w-300">
+						<h3 class="text-clear-secondary text-3xl text-center px-6 pt-10 pb-8 md:text-title-h3">
+							Planos mensais para seu pet
+						</h3>
+						<div class="flex flex-col gap-8 items-center pb-10 xl:flex-row xl:justify-center">
+							<div class="mx-4 bg-white rounded-2xl max-w-74.5">
+								<div class="flex flex-col gap-4 items-center px-4 py-4">
+									<img class="max-w-41" src="./images/cheirosinho.png" aria-hidden="true" />
+									<h4 class="text-3xl text-neutral-black">Cheirosinho</h4>
+									<p class="text-base text-neutral-black text-center">
+										Banho, tosa e corte de unhas 2x ao mês! O pacote econômico essencial para o bem-estar do seu pet! Não inclui
+										coleta.
+									</p>
+									<p class="text-title-h3 text-clear-primary font-sigmar">R$ 80</p>
+									<a class="px-6 py-2 bg-clear-primary text-neutral-white rounded-4xl" href="#">Assinar plano</a>
+								</div>
 							</div>
-							<div>
-								<img src="./images/amigo-fiel.png" aria-hidden="true" />
-								<h4>Amigo Fiel</h4>
-								<p>
-									Mais conforto para seu amigo! Banho, tosa, corte de unhas 2x ao mês, 1 consulta veterinária e busca em
-									domicílio!
-								</p>
-								<p>R$ 120</p>
-								<a href="">Assinar plano</a>
+							<div class="mx-4 bg-white rounded-2xl max-w-74.5">
+								<div class="flex flex-col gap-4 items-center px-4 py-4">
+									<img class="max-w-41" src="./images/amigo-fiel.png" aria-hidden="true" />
+									<h4 class="text-3xl text-neutral-black">Amigo Fiel</h4>
+									<p class="text-base text-neutral-black text-center">
+										Mais conforto para seu amigo! Banho, tosa, corte de unhas 2x ao mês, 1 consulta veterinária e busca em
+										domicílio!
+									</p>
+									<p class="text-title-h3 text-clear-primary font-sigmar">R$ 120</p>
+									<a class="px-6 py-2 bg-clear-primary text-neutral-white rounded-4xl" href="">Assinar plano</a>
+								</div>
 							</div>
-							<div>
-								<img src="./images/Imagem-pata-ouro.png" aria-hidden="true" />
-								<h4>Pata de Ouro</h4>
-								<p>
-									Seu amigo merece o mundo! Banho, tosa e unhas 3x ao mês, 1 consulta veterinária, busca em domicílio e
-									adestramento!
-								</p>
-								<p>R$ 250</p>
-								<a href="#">Assinar plano</a>
+							<div class="mx-4 bg-white rounded-2xl max-w-74.5">
+								<div class="flex flex-col gap-4 items-center px-4 py-4">
+									<img class="max-w-41" src="./images/Imagem-pata-ouro.png" aria-hidden="true" />
+									<h4 class="text-3xl text-neutral-black">Pata de Ouro</h4>
+									<p class="text-base text-neutral-black text-center">
+										Seu amigo merece o mundo! Banho, tosa e unhas 3x ao mês, 1 consulta veterinária, busca em domicílio e
+										adestramento!
+									</p>
+									<p class="text-title-h3 text-clear-primary font-sigmar">R$ 250</p>
+									<a class="px-6 py-2 bg-clear-primary text-neutral-white rounded-4xl" href="#">Assinar plano</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section>
+			<section class="bg-clear-secondary flex flex-col items-center overflow-hidden">
 				<div>
-					<h2>Super ofertas:</h2>
-					<div>
-						<button type="button" aria-label="voltar"><img src="./images/voltar.svg" aria-hidden="true" /></button>
-						<ul>
-							<li>
-								<a href="#">
-									<img src="./images/biskrok.png" alt="Imagen do pacote de biscoitos caninos" />
-									<h5>Biscoito Pedigree Biscrok</h5>
-									<p>Multi para Cães Adultos 500g</p>
-									<p>R$ 19,99</p>
+					<h2 class="text-center md:text-title-h3 xl:pt-20 pt-10 pb-8 text-clear-primary text-title-h4">Super ofertas:</h2>
+					<div class="relative">
+						<button class="absolute left-0 top-52 cursor-pointer" type="button" aria-label="voltar">
+							<img src="./images/voltar.svg" aria-hidden="true" />
+						</button>
+						<ul class="max-w-300 w-70.5 md:w-145 xl:w-300 flex gap-6 overflow-hidden pb-10 xl:pb-20">
+							<li class="bg-white rounded-2xl">
+								<a href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
+									<img class="w-66.5" src="./images/biskrok.png" alt="Imagen do pacote de biscoitos caninos" />
+									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">
+										Biscoito Pedigree Biscrok
+									</h5>
+									<p class="text-base text-neutral-black text-center">Multi para Cães Adultos 500g</p>
+									<p class="font-semibold text-title-h5 text-neutral-black">R$ 19,99</p>
 								</a>
 							</li>
-							<li>
-								<a href="#">
-									<img src="./images/golden-special.png" alt="Imagem do pacote de ração" />
-									<h5>Ração Golden Special</h5>
-									<p>Cães Adultos Sabor Frango e Carne 15kg</p>
-									<p>R$ 149,00</p>
+							<li class="bg-white rounded-2xl">
+								<a href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
+									<img class="w-66.5" src="./images/golden-special.png" alt="Imagem do pacote de ração" />
+									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">Ração Golden Special</h5>
+									<p class="text-base text-neutral-black text-center">Cães Adultos Sabor Frango e Carne 15kg</p>
+									<p class="font-semibold text-title-h5 text-neutral-black">R$ 149,00</p>
 								</a>
 							</li>
-							<li>
-								<a href="#">
-									<img src="./images/pipicat.png" alt="Imagen do pacote de areia para gato" />
-									<h5>Areia Higiênica Pipicat</h5>
-									<p>Classic para Gatos 4 Kg</p>
-									<p>R$ 45,00</p>
+							<li class="bg-white rounded-2xl">
+								<a href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
+									<img class="w-66.5" src="./images/pipicat.png" alt="Imagen do pacote de areia para gato" />
+									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">Areia Higiênica Pipicat</h5>
+									<p class="text-base text-neutral-black text-center">Classic para Gatos 4 Kg</p>
+									<p class="font-semibold text-title-h5 text-neutral-black">R$ 45,00</p>
 								</a>
 							</li>
-							<li>
-								<a href="#">
-									<img src="./images/arranhador.png" alt="Imagen do arranhador" />
-									<h5>Arranhador São Benedito Pet</h5>
-									<p>Redondo com pluma e mola rosa</p>
-									<p>R$ 59,90</p>
+							<li class="bg-white rounded-2xl">
+								<a href="#" class="w-70.5 flex flex-col items-center gap-4">
+									<img class="w-66.5" src="./images/arranhador.png" alt="Imagen do arranhador" />
+									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">
+										Arranhador São Benedito Pet
+									</h5>
+									<p class="text-base text-neutral-black text-center">Redondo com pluma e mola rosa</p>
+									<p class="font-semibold text-title-h5 text-neutral-black">R$ 59,90</p>
 								</a>
 							</li>
-							<li>
-								<a href="#">
-									<img src="./images/biskrok.png" alt="Imagen do pacote de biscoitos caninos" />
-									<h5>Biscoito Pedigree Biscrok</h5>
-									<p>Multi para Cães Adultos 500g</p>
-									<p>R$ 19,99</p>
+							<li class="bg-white rounded-2xl">
+								<a href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
+									<img class="w-66.5" src="./images/biskrok.png" alt="Imagen do pacote de biscoitos caninos" />
+									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">
+										Biscoito Pedigree Biscrok
+									</h5>
+									<p class="text-base text-neutral-black text-center">Multi para Cães Adultos 500g</p>
+									<p class="font-semibold text-title-h5 text-neutral-black">R$ 19,99</p>
 								</a>
 							</li>
-							<li>
-								<a href="#">
-									<img src="./images/golden-special.png" alt="Imagem do pacote de ração" />
-									<h5>Ração Golden Special</h5>
-									<p>Cães Adultos Sabor Frango e Carne 15kg</p>
-									<p>R$ 149,00</p>
+							<li class="bg-white rounded-2xl">
+								<a href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
+									<img class="w-66.5" src="./images/golden-special.png" alt="Imagem do pacote de ração" />
+									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">Ração Golden Special</h5>
+									<p class="text-base text-neutral-black text-center">Cães Adultos Sabor Frango e Carne 15kg</p>
+									<p class="font-semibold text-title-h5 text-neutral-black">R$ 149,00</p>
 								</a>
 							</li>
 						</ul>
-						<button type="button" aria-label="voltar"><img src="./images/avancar.svg" aria-hidden="true" /></button>
+						<button class="absolute right-0 top-52 cursor-pointer" type="button" aria-label="voltar">
+							<img src="./images/avancar.svg" aria-hidden="true" />
+						</button>
 					</div>
 				</div>
 			</section>
 			<section>
-				<div>
-					<h2>Marcas parceiras</h2>
-					<ul>
-						<li>
+				<div class="py-10 flex flex-col items-center xl:py-20">
+					<h2 class="text-title-h4 text-clear-primary text-center pb-8 md:text-title-h3">Marcas parceiras</h2>
+					<ul class="grid grid-cols-2 gap-4 md:grid-cols-4 md:max-w-130 md:gap-6 xl:grid-cols-6 xl:max-w-268 xl:gap-20">
+						<li class="justify-self-end">
 							<a href="#"><img src="./images/logo-petisco.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="md:justify-self-center">
 							<a href="#"><img src="./images/logo-pelos-patas.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="justify-self-end">
 							<a href="#"><img src="./images/logo-miaw.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="md:justify-self-center">
 							<a href="#"><img src="./images/logo-wooofy.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="justify-self-end">
 							<a href="#"><img src="./images/logo-animalia.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="md:justify-self-center">
 							<a href="#"><img src="./images/logo-petstars.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="justify-self-end">
 							<a href="#"><img src="./images/logo-pet-mania.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="md:justify-self-center">
 							<a href="#"><img src="./images/logo-rooster.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="justify-self-end">
 							<a href="#"><img src="./images/logo-bicudos.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="md:justify-self-center">
 							<a href="#"><img src="./images/logo-corgi.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="justify-self-end">
 							<a href="#"><img src="./images/logo-mascot.png" alt="" /></a>
 						</li>
-						<li>
+						<li class="md:justify-self-center">
 							<a href="#"><img src="./images/logo-amigo-fiel.png" alt="" /></a>
 						</li>
 					</ul>
 				</div>
 			</section>
 			<section>
-				<div>
-					<h2>Assine nossa newsletter!</h2>
-					<p>Cadastre-se e receba nossas promoções e novidades!</p>
-					<form>
-						<input aria-label="Email" placeholder="Insira seu endereço de email" type="text" />
-						<div>
-							<p>Selecione seu pet:</p>
-							<input type="checkbox" id="cat" name="pet" value="cat" />
-							<label for="cat">Gato</label><br />
-							<input type="checkbox" id="dog" name="pet" value="dog" />
-							<label for="dog">Cão</label><br />
-							<input type="checkbox" id="rodent" name="pet" value="rodent" />
-							<label for="rodent">Roedor</label><br />
-							<input type="checkbox" id="others" name="pet" value="others" />
-							<label for="others">Outros</label>
+				<div class="py-10 bg-clear-secondary px-6 xl:py-20">
+					<h2 class="text-title-h4 text-clear-primary text-center pb-8 md:text-title-h3">Assine nossa newsletter!</h2>
+					<p class="text-neutral-black text-xl text-center pb-4">Cadastre-se e receba nossas promoções e novidades!</p>
+					<form class="flex flex-col items-center gap-4 xl:flex-row xl:gap-6 xl: justify-center">
+						<input
+							class="rounded-4xl border border-neutral-black max-w-78 md:w-70 w-full h-10 pl-6 font-poppins placeholder:font-poppins placeholder:text-base placeholder:text-neutral-black"
+							aria-label="Email"
+							placeholder="Insira seu endereço de email"
+							type="text"
+						/>
+						<div class="grid grid-cols-2 grid-rows-3 gap-4 md:flex">
+							<p class="text-neutral-black text-base col-span-2 text-center pr-2">Selecione seu pet:</p>
+
+							<label class="relative inline-flex items-center cursor-pointer gap-2 group text-neutral-black font-poppins text-base" for="cat">
+								<input class="absolute opacity-0 pointer-events-none" type="checkbox" id="cat" name="pet" value="cat" />
+								<span class="w-5 h-5 border border-neutral-black flex items-center justify-center p-0.5 rounded-xs"><span class="group-has-[input:checked]:bg-clear-primary w-full h-full rounded-xs"></span></span>
+								Gato
+							</label>
+
+							<label class="relative inline-flex items-center cursor-pointer gap-2 group text-neutral-black font-poppins text-base" for="dog">
+								<input class="absolute opacity-0 pointer-events-none" type="checkbox" id="dog" name="pet" value="dog" />
+								<span class="w-5 h-5 border border-neutral-black flex items-center justify-center p-0.5 rounded-xs"><span class="group-has-[input:checked]:bg-clear-primary w-full h-full rounded-xs"></span></span>
+								Cão
+							</label>
+							
+							<label class="relative inline-flex items-center cursor-pointer gap-2 group text-neutral-black font-poppins text-base" for="rodent">
+								<input class="absolute opacity-0 pointer-events-none" type="checkbox" id="rodent" name="pet" value="rodent" />
+								<span class="w-5 h-5 border border-neutral-black flex items-center justify-center p-0.5 rounded-xs"><span class="group-has-[input:checked]:bg-clear-primary w-full h-full rounded-xs"></span></span>
+								Roedor
+							</label>
+							
+							<label class="relative inline-flex items-center cursor-pointer gap-2 group text-neutral-black font-poppins text-base" for="others">
+								<input class="absolute opacity-0 pointer-events-none" type="checkbox" id="others" name="pet" value="others" />
+								<span class="w-5 h-5 border border-neutral-black flex items-center justify-center p-0.5 rounded-xs"><span class="group-has-[input:checked]:bg-clear-primary w-full h-full rounded-xs"></span></span>
+								Outros
+							</label>
 						</div>
-						<button type="button">Inscrever</button>
+						<button
+							class="max-w-35.5 w-full h-11.5 cursor-pointer bg-clear-primary text-white rounded-4xl font-semibold text-xl font-poppins flex items-center justify-center"
+							type="button"
+						>
+							Inscrever
+						</button>
 					</form>
 				</div>
 			</section>
 		</main>
 		<footer>
-			<div>
-				<div>
-					<p>Acesse nossas redes:</p>
-					<ul>
+			<div class="mx-auto p-6 flex flex-col items-center justify-center gap-4 xl:flex-row xl:justify-between xl:max-w-300 xl:w-full md:py-10">
+				<div class="flex flex-col gap-2">
+					<p class="text-base text-neutral-black">Acesse nossas redes:</p>
+					<ul class="flex justify-center gap-2 xl:justify-start">
 						<li>
 							<a href=""><img src="./images/whatsapp.svg" alt="" /></a>
 						</li>
@@ -235,7 +325,7 @@
 						</li>
 					</ul>
 				</div>
-				<p>Desenvolvido por Alura. Projeto fictício sem fins comerciais.</p>
+				<p class="text-center text-base text-neutral-black">Desenvolvido por Alura. Projeto fictício sem fins comerciais.</p>
 			</div>
 		</footer>
 	</body>

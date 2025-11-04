@@ -1,1 +1,71 @@
 @import "tailwindcss";
+
+@theme {
+	--font-poppins: "Poppins", sans-serif;
+	--font-sigmar: "Sigmar", sans-serif;
+	--color-clear-primary: #ee6451;
+	--color-primary: #c13724;
+	--color-clear-secondary: #fff5eb;
+	--color-secondary: #f5e6d6;
+	--color-clear-tertiary: #cbda74;
+	--color-tertiary: #a2b72b;
+	--color-neutral-white: #ffffff;
+	--color-neutral-gray: #b9b9b9;
+	--color-neutral-black: #444444;
+	--text-title-h2: 2.635rem;
+	--text-title-h3: 2.438rem;
+	--text-title-h4: 1.938rem;
+	--text-title-h5: 1.563rem;
+	--text-text-small: 0.813rem;
+	--text-title-mobile: 2.4rem;
+	--breakpoint-xl: 75rem;
+}
+
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		@apply font-sigmar font-normal;
+	}
+
+	h1 {
+		@apply xl:text-7xl;
+	}
+
+	h2 {
+		@apply xl:text-title-h2;
+	}
+
+	h3 {
+		@apply xl:text-title-h3;
+	}
+
+	h4 {
+		@apply xl:text-title-h4;
+	}
+
+	h5 {
+		@apply xl:text-title-h5;
+	}
+
+	p,
+	a {
+		@apply font-poppins;
+	}
+}
+
+@layer components {
+	.input {
+		@apply border-solid border border-neutral-black rounded-4xl py-2 pl-4;
+	}
+
+    .input::placeholder{
+        @apply text-neutral-gray font-poppins text-base;
+    }
+
+	.servico{
+		@apply w-59.5 flex justify-center items-center h-15.5 bg-clear-secondary text-clear-primary text-2xl rounded-2xl text-center md:h-22 md:gap-2 md:min-w-74 cursor-pointer;
+	}
+}
