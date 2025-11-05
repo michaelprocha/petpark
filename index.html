@@ -21,19 +21,19 @@
 					<img class="w-48 md:justify-self-end" src="./images/logo.svg" alt="Logo" />
 					<input
 						placeholder="O que você procura?"
-						class="order-3 max-w-150 w-full input bg-[url(../images/search.svg)] bg-no-repeat bg-position-[95%_center] md:col-span-2 md:justify-self-center"
+						class="focus:border-primary focus:outline-none order-3 max-w-150 w-full input bg-[url(../images/search.svg)] bg-no-repeat bg-position-[95%_center] md:col-span-2 md:justify-self-center"
 						type="search"
 					/>
-					<div class="max-w-150 w-full flex justify-between md:w-auto md:justify-self-start xl:order-3">
-						<img class="md:hidden" src="./images/menu.svg" alt="Abrir menu" />
-						<div class="hidden">
-							<img src="./images/close.svg" alt="Fechar menu" />
-							<ul>
-								<li><a class="" href="#">Raças</a></li>
-								<li><a class="" href="#">Planos Pet</a></li>
-								<li><a class="" href="#">Serviços</a></li>
-								<li><a class="" href="#">Sobre nós</a></li>
-								<li><a class="" href="#">Clube de descontos</a></li>
+					<div class="relative max-w-150 w-full flex justify-between md:w-auto md:justify-self-start xl:order-3">
+						<img id="menu" class="cursor-pointer md:hidden" src="./images/menu.svg" alt="Abrir menu" />
+						<div id="menu-mobile" class="hidden absolute flex-col gap-2 cursor-pointer top-0 bg-white p-4 rounded-br-2xl shadow-menu">
+							<img id="menu-close" class="w-4 self-end" src="./images/close.svg" alt="Fechar menu" />
+							<ul class="flex flex-col gap-2">
+								<li><a class="text-neutral-black text-xl font-normal active:text-primary" class="" href="#">Raças</a></li>
+								<li><a class="text-neutral-black text-xl font-normal active:text-primary" class="" href="#">Planos Pet</a></li>
+								<li><a class="text-neutral-black text-xl font-normal active:text-primary" class="" href="#">Serviços</a></li>
+								<li><a class="text-neutral-black text-xl font-normal active:text-primary" class="" href="#">Sobre nós</a></li>
+								<li><a class="text-neutral-black text-xl font-normal active:text-primary" class="" href="#">Clube de descontos</a></li>
 							</ul>
 						</div>
 						<div class="flex gap-2">
@@ -63,7 +63,7 @@
 				</div>
 			</section>
 			<section class="pb-10">
-				<div class="flex flex-col items-center mp-4 md:px-15">
+				<div class="px-4 md:px-15 flex flex-col items-center mp-4">
 					<div class="py-10 flex flex-col items-center xl:py-20">
 						<h2 class="text-clear-primary text-3xl pb-8 xl:pb-20 md:text-title-h2">Nossos serviços</h2>
 						<ul class="flex flex-col gap-2 md:flex-row md:flex-wrap md:justify-center md:gap-4">
@@ -109,7 +109,7 @@
 							Planos mensais para seu pet
 						</h3>
 						<div class="flex flex-col gap-8 items-center pb-10 xl:flex-row xl:justify-center">
-							<div class="mx-4 bg-white rounded-2xl max-w-74.5">
+							<div class="group mx-4 bg-white rounded-2xl max-w-74.5">
 								<div class="flex flex-col gap-4 items-center px-4 py-4">
 									<img class="max-w-41" src="./images/cheirosinho.png" aria-hidden="true" />
 									<h4 class="text-3xl text-neutral-black">Cheirosinho</h4>
@@ -117,11 +117,11 @@
 										Banho, tosa e corte de unhas 2x ao mês! O pacote econômico essencial para o bem-estar do seu pet! Não inclui
 										coleta.
 									</p>
-									<p class="text-title-h3 text-clear-primary font-sigmar">R$ 80</p>
-									<a class="px-6 py-2 bg-clear-primary text-neutral-white rounded-4xl" href="#">Assinar plano</a>
+									<p class="group-hover:text-primary text-title-h3 text-clear-primary font-sigmar">R$ 80</p>
+									<a class="group-hover:bg-primary px-6 py-2 bg-clear-primary text-neutral-white rounded-4xl" href="#">Assinar plano</a>
 								</div>
 							</div>
-							<div class="mx-4 bg-white rounded-2xl max-w-74.5">
+							<div class="group mx-4 bg-white rounded-2xl max-w-74.5">
 								<div class="flex flex-col gap-4 items-center px-4 py-4">
 									<img class="max-w-41" src="./images/amigo-fiel.png" aria-hidden="true" />
 									<h4 class="text-3xl text-neutral-black">Amigo Fiel</h4>
@@ -129,11 +129,11 @@
 										Mais conforto para seu amigo! Banho, tosa, corte de unhas 2x ao mês, 1 consulta veterinária e busca em
 										domicílio!
 									</p>
-									<p class="text-title-h3 text-clear-primary font-sigmar">R$ 120</p>
-									<a class="px-6 py-2 bg-clear-primary text-neutral-white rounded-4xl" href="">Assinar plano</a>
+									<p class="group-hover:text-primary text-title-h3 text-clear-primary font-sigmar">R$ 120</p>
+									<a class="group-hover:bg-primary px-6 py-2 bg-clear-primary text-neutral-white rounded-4xl" href="">Assinar plano</a>
 								</div>
 							</div>
-							<div class="mx-4 bg-white rounded-2xl max-w-74.5">
+							<div class=" group mx-4 bg-white rounded-2xl max-w-74.5">
 								<div class="flex flex-col gap-4 items-center px-4 py-4">
 									<img class="max-w-41" src="./images/Imagem-pata-ouro.png" aria-hidden="true" />
 									<h4 class="text-3xl text-neutral-black">Pata de Ouro</h4>
@@ -141,8 +141,8 @@
 										Seu amigo merece o mundo! Banho, tosa e unhas 3x ao mês, 1 consulta veterinária, busca em domicílio e
 										adestramento!
 									</p>
-									<p class="text-title-h3 text-clear-primary font-sigmar">R$ 250</p>
-									<a class="px-6 py-2 bg-clear-primary text-neutral-white rounded-4xl" href="#">Assinar plano</a>
+									<p class="group-hover:text-primary text-title-h3 text-clear-primary font-sigmar">R$ 250</p>
+									<a class="group-hover:bg-primary px-6 py-2 bg-clear-primary text-neutral-white rounded-4xl" href="#">Assinar plano</a>
 								</div>
 							</div>
 						</div>
@@ -153,13 +153,13 @@
 				<div>
 					<h2 class="text-center md:text-title-h3 xl:pt-20 pt-10 pb-8 text-clear-primary text-title-h4">Super ofertas:</h2>
 					<div class="relative">
-						<button class="absolute left-0 top-52 cursor-pointer" type="button" aria-label="voltar">
+						<button class="carousel-arrows absolute left-0 top-52 cursor-pointer" type="button" aria-label="voltar">
 							<img src="./images/voltar.svg" aria-hidden="true" />
 						</button>
-						<ul class="max-w-300 w-70.5 md:w-145 xl:w-300 flex gap-6 overflow-hidden pb-10 xl:pb-20">
-							<li class="bg-white rounded-2xl">
-								<a href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
-									<img class="w-66.5" src="./images/biskrok.png" alt="Imagen do pacote de biscoitos caninos" />
+						<ul id="carousel-container" class="max-w-300 w-70.5 md:w-145 xl:w-300 flex gap-6 overflow-hidden pb-10 xl:pb-20">
+							<li class="carousel-itens bg-white rounded-2xl">
+								<a draggable="false" href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
+									<img draggable="false" class="w-66.5" src="./images/biskrok.png" alt="Imagen do pacote de biscoitos caninos" />
 									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">
 										Biscoito Pedigree Biscrok
 									</h5>
@@ -167,25 +167,25 @@
 									<p class="font-semibold text-title-h5 text-neutral-black">R$ 19,99</p>
 								</a>
 							</li>
-							<li class="bg-white rounded-2xl">
-								<a href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
-									<img class="w-66.5" src="./images/golden-special.png" alt="Imagem do pacote de ração" />
+							<li class="carousel-itens bg-white rounded-2xl">
+								<a draggable="false" href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
+									<img draggable="false" class="w-66.5" src="./images/golden-special.png" alt="Imagem do pacote de ração" />
 									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">Ração Golden Special</h5>
 									<p class="text-base text-neutral-black text-center">Cães Adultos Sabor Frango e Carne 15kg</p>
 									<p class="font-semibold text-title-h5 text-neutral-black">R$ 149,00</p>
 								</a>
 							</li>
-							<li class="bg-white rounded-2xl">
-								<a href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
-									<img class="w-66.5" src="./images/pipicat.png" alt="Imagen do pacote de areia para gato" />
+							<li class="carousel-itens bg-white rounded-2xl">
+								<a draggable="false" href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
+									<img draggable="false" class="w-66.5" src="./images/pipicat.png" alt="Imagen do pacote de areia para gato" />
 									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">Areia Higiênica Pipicat</h5>
 									<p class="text-base text-neutral-black text-center">Classic para Gatos 4 Kg</p>
 									<p class="font-semibold text-title-h5 text-neutral-black">R$ 45,00</p>
 								</a>
 							</li>
-							<li class="bg-white rounded-2xl">
-								<a href="#" class="w-70.5 flex flex-col items-center gap-4">
-									<img class="w-66.5" src="./images/arranhador.png" alt="Imagen do arranhador" />
+							<li class="carousel-itens bg-white rounded-2xl">
+								<a draggable="false" href="#" class="w-70.5 flex flex-col items-center gap-4">
+									<img draggable="false" class="w-66.5" src="./images/arranhador.png" alt="Imagen do arranhador" />
 									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">
 										Arranhador São Benedito Pet
 									</h5>
@@ -193,9 +193,9 @@
 									<p class="font-semibold text-title-h5 text-neutral-black">R$ 59,90</p>
 								</a>
 							</li>
-							<li class="bg-white rounded-2xl">
-								<a href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
-									<img class="w-66.5" src="./images/biskrok.png" alt="Imagen do pacote de biscoitos caninos" />
+							<li class="carousel-itens bg-white rounded-2xl">
+								<a draggable="false" href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
+									<img draggable="false" class="w-66.5" src="./images/biskrok.png" alt="Imagen do pacote de biscoitos caninos" />
 									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">
 										Biscoito Pedigree Biscrok
 									</h5>
@@ -203,16 +203,16 @@
 									<p class="font-semibold text-title-h5 text-neutral-black">R$ 19,99</p>
 								</a>
 							</li>
-							<li class="bg-white rounded-2xl">
-								<a href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
-									<img class="w-66.5" src="./images/golden-special.png" alt="Imagem do pacote de ração" />
+							<li class="carousel-itens bg-white rounded-2xl">
+								<a draggable="false" href="#" class="w-70.5 h-114.5 flex flex-col items-center justify-center gap-4">
+									<img draggable="false" class="w-66.5" src="./images/golden-special.png" alt="Imagem do pacote de ração" />
 									<h5 class="text-center font-poppins font-semibold text-title-h5 text-neutral-black">Ração Golden Special</h5>
 									<p class="text-base text-neutral-black text-center">Cães Adultos Sabor Frango e Carne 15kg</p>
 									<p class="font-semibold text-title-h5 text-neutral-black">R$ 149,00</p>
 								</a>
 							</li>
 						</ul>
-						<button class="absolute right-0 top-52 cursor-pointer" type="button" aria-label="voltar">
+						<button class="carousel-arrows absolute right-0 top-52 cursor-pointer" type="button" aria-label="voltar">
 							<img src="./images/avancar.svg" aria-hidden="true" />
 						</button>
 					</div>
@@ -267,7 +267,7 @@
 					<p class="text-neutral-black text-xl text-center pb-4">Cadastre-se e receba nossas promoções e novidades!</p>
 					<form class="flex flex-col items-center gap-4 xl:flex-row xl:gap-6 xl: justify-center">
 						<input
-							class="rounded-4xl border border-neutral-black max-w-78 md:w-70 w-full h-10 pl-6 font-poppins placeholder:font-poppins placeholder:text-base placeholder:text-neutral-black"
+							class="focus:border-primary focus:outline-none rounded-4xl border border-neutral-black max-w-78 md:w-70 w-full h-10 pl-6 font-poppins placeholder:font-poppins placeholder:text-base placeholder:text-neutral-black"
 							aria-label="Email"
 							placeholder="Insira seu endereço de email"
 							type="text"
@@ -300,7 +300,7 @@
 							</label>
 						</div>
 						<button
-							class="max-w-35.5 w-full h-11.5 cursor-pointer bg-clear-primary text-white rounded-4xl font-semibold text-xl font-poppins flex items-center justify-center"
+							class="hover:bg-primary max-w-35.5 w-full h-11.5 cursor-pointer bg-clear-primary text-white rounded-4xl font-semibold text-xl font-poppins flex items-center justify-center"
 							type="button"
 						>
 							Inscrever
@@ -328,5 +328,6 @@
 				<p class="text-center text-base text-neutral-black">Desenvolvido por Alura. Projeto fictício sem fins comerciais.</p>
 			</div>
 		</footer>
+		<script src="./javascript/app.js"></script>
 	</body>
 </html>
